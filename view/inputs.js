@@ -1,3 +1,5 @@
+// fonctions utilisées pour récupérer les informations entrées dans les balises input
+
 function	getDateOutOfString(date, input_date)
 {
 	var i = 0;
@@ -62,3 +64,5 @@ function	main()
 	retrieve(inputs);
 	console.log(inputs);
 }
+
+// fin parsing
