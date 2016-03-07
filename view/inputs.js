@@ -14,7 +14,7 @@ function	retrieve(inputs)
 {
 	inputs.prec_cult = document.getElementById("prec_cult");
 	inputs.type = document.getElementById("type");
-	inputs.size = document.getElementById("size");
+	inputs.size = parseInt(document.getElementById("size").text);
 	inputs.amendments = document.getElementById("amendments");
 	inputs.fertilised = document.getElementById("fertilised");
 	inputs.elaborate = document.getElementById("work");
