@@ -12,3 +12,11 @@ button{
     padding: 10px;
     width: 300px;
 }
+
+#size{
+    width: 40px;
+}
+
+#input_date{
+    width: 60px;
+}
