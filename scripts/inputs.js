@@ -32,18 +32,22 @@ function	getDateOutOfString(date, input_date)
 
 function	retrieve(inputs)
 {
-	var getter = document.getElementById("type_cult");
-
 	inputs.prev_cult = document.getElementById("prev_cult").value;
 	inputs.size = parseInt(document.getElementById("size").value);
 	inputs.watering = document.getElementById("watering").value;
 	getDateOutOfString(inputs.sowing_date, document.getElementById("input_date").value);
+
 	inputs.amendments = document.getElementById("amendment").checked;
 	inputs.fertilised = document.getElementById("fertilisation").checked;
 	inputs.elaborate = document.getElementById("work").checked;
-	inputs.type_cult = getter.options[getter.selectedIndex].text;
-	getter = document.getElementById("type");
+
+	var getter = document.getElementById("type");
 	inputs.type = getter.options[getter.selectedIndex].text;
+
+	getter = document.getElementById("type_cult");
+	if (getter.options[getter.selectedIndex].value == "Type2")
+		getter = document.getElementById("varietyChild");
+	inputs.type_cult = getter.options[getter.selectedIndex].value;
 }
 
 function	main()

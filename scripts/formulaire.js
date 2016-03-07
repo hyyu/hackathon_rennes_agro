@@ -8,7 +8,6 @@ function update(element){
 
 
     if (val == "Type2"){
-        console.log("ok");
         var array = ["Red","Blue","Orange","Red"];
         var selectList = document.createElement("select");
         selectList.id = "varietyChild";
