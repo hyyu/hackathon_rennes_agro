@@ -1,15 +1,14 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Previgrain</title>
-    <!-- <script type="application/x-javascript" src="inputs.js" /> -->
+    <script type="application/x-javascript" src="inputs.js" /></script>
 </head>
 <body>
 <ul>
     <li> Précédents de culture   <input type="text" id="prev_cult"> </input> </li>
-    <li> Taile de la parcelle    <input type="text" id="size" style="visibility: hidden"> </input> </li>
-    <li> Type de sol             <input type="text" id="type" style="visibility: hidden"> </input> </li>
+    <li> Taile de la parcelle    <input type="text" id="size"> </input> </li>
+    <li> Type de sol             <input type="text" id="type" > </input> </li>
     <li> Amendements/Fertilisation
         <ul>
             <li> Amendement           <input type="checkbox" id="amendment"> </input> </li>
@@ -23,5 +22,9 @@
     <li> Date de semis           <input type="text" id="input_date"> </input> </li>
 </ul>
 
+<buttton type="submit" onclick="main()">submit</button>
+
 </body>
 </html>
+
+<!-- style="visibility: hidden" -->

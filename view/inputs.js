@@ -1,32 +1,50 @@
 function	getDateOutOfString(date, input_date)
 {
-	val	i = 0;
+	var i = 0;
+	var j = 0;
 
-	while (i < input_date.length && input_date[i] != ' ')
-		{
-			date.day += parseInt(input_date[i]);
-			i++;
-		}
-	console.log(date.day);
+	while (i < input_date.length && input_date[i] == ' ')
+		i++;
+	while (j >= 0 && i < input_date.length && input_date[i] != ' ')
+	{
+		date.day += (input_date[i]) * Math.pow(10, j--);
+		i++;
+	}
+	j = 1;
+	while (i < input_date.length && input_date[i] == ' ')
+		i++;
+	while (j >= 0 && i < input_date.length && input_date[i] != ' ')
+	{
+		date.month += (input_date[i]) * Math.pow(10, j--);
+		i++;
+	}
+	while (i < input_date.length && input_date[i] == ' ')
+		i++;
+	j = 3;
+	while (j >= 0 && i < input_date.length && input_date[i] != ' ')
+	{
+		date.year += (input_date[i]) * Math.pow(10, j--);
+		i++;
+	}
 }
 
 function	retrieve(inputs)
 {
-	inputs.prec_cult = document.getElementById("prec_cult");
-	inputs.type = document.getElementById("type");
-	inputs.size = parseInt(document.getElementById("size").text);
-	inputs.amendments = document.getElementById("amendments");
-	inputs.fertilised = document.getElementById("fertilised");
-	inputs.elaborate = document.getElementById("work");
-	inputs.type_cult = document.getElementById("type_cult");
-	inputs.watering = document.getElementById("watering");
-	getDateOutOfString(inputs.sowing_date, document.getElementById("input_date"));
+	inputs.prev_cult = document.getElementById("prev_cult").value;
+	inputs.type = document.getElementById("type").value;
+	inputs.size = parseInt(document.getElementById("size").value);
+	inputs.amendments = document.getElementById("amendment").checked;
+	inputs.fertilised = document.getElementById("fertilisation").checked;
+	inputs.elaborate = document.getElementById("work").checked;
+	inputs.type_cult = document.getElementById("type_cult").value;
+	inputs.watering = document.getElementById("watering").value;
+	getDateOutOfString(inputs.sowing_date, document.getElementById("input_date").value);
 }
 
 function	main()
 {
-	val inputs = {
-		prec_cult:     "",
+	var inputs = {
+		prev_cult:     "",
 		type:          "",
 		size:           0,
 		amendments: false,
@@ -42,4 +60,5 @@ function	main()
 	};
 
 	retrieve(inputs);
+	console.log(inputs);
 }
