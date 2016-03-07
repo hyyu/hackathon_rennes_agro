@@ -2,28 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Previgrain</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script type="application/x-javascript" src="inputs.js" /></script>
 </head>
 <body>
-<ul>
-    <li> Précédents de culture   <input type="text" id="prev_cult"> </input> </li>
-    <li> Taile de la parcelle    <input type="text" id="size"> </input> </li>
-    <li> Type de sol             <input type="text" id="type" > </input> </li>
-    <li> Amendements/Fertilisation
-        <ul>
-            <li> Amendement           <input type="checkbox" id="amendment"> </input> </li>
-            <li> Fertilisation        <input type="checkbox" id="fertilisation"> </input> </li>
-        </ul>
-    </li>
-
-    <li> Travail du sol          <input type="checkbox" id="work"> </input> </li>
-    <li> Type de culture/variété <input type="text" id="type_cult"> </input> </li>
-    <li> Arrosage                <input type="text" id="watering"> </input> </li>
-    <li> Date de semis           <input type="text" id="input_date"> </input> </li>
-</ul>
-
-<buttton type="submit" onclick="main()">submit</button>
-
+    <label for="prev_cult">Précédents de culture :</label><input type="text" id="prev_cult"> </input> <br/><br/>
+    <label for="size">Taille de la culture :</label><input type="text" id="size"> </input> <br/><br/>
+    <label for="type">Type de sol :</label><input type="text" id="type"> </input> <br/><br/>
+    <label for="type_cult">Type de culture :</label><input type="text" id="type_cult"> </input> <br/><br/>
+    <label for="watering">Arrosage :</label><input type="text" id="watering"> </input> <br/><br/>
+    <label for="input_date">Date de semis :</label><input type="text" id="input_date"> </input> <br/><br/>
+    <label for="amendment">Amendement :</label><input type="checkbox" id="amendment"> </input> <br><br/>
+    <label for="fertilisation">Fertilisation :</label><input type="checkbox" id="fertilisation"> </input> <br/><br/>
+    <label for="work">Travail du sol :</label><input type="checkbox" id="work"> </input> <br/><br/>
+    <button type="button" onclick="main();"> valider </button>
 </body>
 </html>
 
