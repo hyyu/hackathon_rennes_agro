@@ -1,5 +1,5 @@
 label{
-    width: 150px;
+    width: 160px;
     display: block;
     float: left;
 }
@@ -13,7 +13,7 @@ button{
     width: 300px;
 }
 
-#size{
+#size, #watering_rep, #watering_duration{
     width: 40px;
 }
 
