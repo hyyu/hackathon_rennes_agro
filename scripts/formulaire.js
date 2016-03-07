@@ -3,9 +3,12 @@ function update(element){
     var idx= element.selectedIndex;
     var val= element.options[idx].value;
     var varietyChild = document.getElementById("varietyChild");
-    varietyChild.parentNode.removeChild(varietyChild);
+    if (varietyChild)
+        varietyChild.parentNode.removeChild(varietyChild);
 
-    if (val == "Type1"){
+
+    if (val == "Type2"){
+        console.log("ok");
         var array = ["Red","Blue","Orange","Red"];
         var selectList = document.createElement("select");
         selectList.id = "varietyChild";
