@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Pepe</title>
-    <script type="application/x-javascript" src="input.js" />
+    <!-- <script type="application/x-javascript" src="input.js" /> -->
 </head>
 <body>
-    Précédents de culture   <input type="text" id="prev_cult"> </input> <br/><br/>
-    Taile de la parcelle    <input type="text" id="size"> </input> <br/><br/>
-    Type de sol             <input type="text" id="type"> </input> <br/><br/>
-    Amendements/Fertilisation <br/>
-                    Amendement           <input type="checkbox" id="amendment"> </input>
-                    Fertilisation        <input type="checkbox" id="fertilisation"> </input> <br/><br/>
+<ul>
+    <li> Précédents de culture   <input type="text" id="prev_cult"> </input> </li>
+    <li> Taile de la parcelle    <input type="text" id="size" style="visibility: hidden"> </input> </li>
+    <li> Type de sol             <input type="text" id="type" style="visibility: hidden"> </input> </li>
+    <li> Amendements/Fertilisation
+        <ul>
+            <li> Amendement           <input type="checkbox" id="amendment"> </input> </li>
+            <li> Fertilisation        <input type="checkbox" id="fertilisation"> </input> </li>
+        </ul></li>
 
-    Travail du sol          <input type="checkbox" id="work"> </input> <br/><br/>
-    Type de culture/variété <input type="text" id="type_cult"> </input> <br/><br/>
-    Arrosage                <input type="text" id="watering"> </input> <br/><br/>
-    Date de semis           <input type="text" id="input_date"> </input> <br/><br/>
+    <li> Travail du sol          <input type="checkbox" id="work"> </input> </li>
+    <li> Type de culture/variété <input type="text" id="type_cult"> </input> </li>
+    <li> Arrosage                <input type="text" id="watering"> </input> </li>
+    <li> Date de semis           <input type="text" id="input_date"> </input> </li>
+</ul>
 </body>
 </html>
