@@ -29,6 +29,14 @@
             </select>
         </span>
         <br/><br/>
+    <label for="fertilizer">Type d'engrais :</label>
+        <span class="custom-dropdown custom-dropdown--white">
+            <select id="fertilizer" class="custom-dropdown__select custom-dropdown__select--white">
+                <option>Type1</option>
+                <option>Type2</option>
+            </select>
+        </span>
+    <br/><br/>
         <label for="type_cult">Type de culture :</label>
         <span class="custom-dropdown custom-dropdown--white">
               <select id="type_cult" onchange="update(this)" class="custom-dropdown__select custom-dropdown__select--white">
@@ -37,6 +45,6 @@
               </select>
         </span>
     <div style="position: absolute; left: 350px; display: inline" id="variety"></div><br/><br/>
-    <button type="button" onclick="main();"> Valider </button>
+    <button type="button" onclick="test();"> Valider </button>
 </body>
 </html>

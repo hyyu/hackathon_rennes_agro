@@ -51,13 +51,18 @@ function	retrieve(inputs)
 function	test()
 {
 	var oReq = new XMLHttpRequest();
+	var buffer;
 	oReq.open("GET", "../tables/calendar/Janvier2015.csv");
-	oReq.overrideMimeType("text/plain; charset=x-user-defined");
+	oReq.onload = function() {
+		buffer = this.responseText;
 
-	oReq.onload = function(e) {
-	var arraybuffer = oReq.response; // not responseText
-	}
-	oReq.responseType = "arraybuffer";
+
+
+
+
+
+
+	};
 	oReq.send();
 }
 
