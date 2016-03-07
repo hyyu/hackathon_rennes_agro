@@ -6,30 +6,37 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script type="application/x-javascript" src="../scripts/inputs.js"></script>
     <script type="application/x-javascript" src="../scripts/formulaire.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
 </head>
 <body>
     <label for="prev_cult">Précédents de culture :</label><input type="text" id="prev_cult"> </input> <br/><br/>
     <label for="size">Taille de la culture :</label><input type="text" id="size"> </input> <br/><br/>
-    <label for="watering">Arrosages par semaine :&nbsp;</label>
+    <label for="watering_rep">Arrosages par semaine :&nbsp;</label>
     <input type="text" id="watering_rep">&nbsp;Durée :&nbsp;</input>
     <input type="text" id="watering_duration"></label>&nbsp;mn<br/><br/>
-    <label for="input_date">Date de semis :</label>
+    <label for="input_year">Date de semis :</label>
     <input type="text" id="input_year" placeholder="yyyy" style="width: 30px; text-align: center"> </input>/
     <input type="text" id="input_month" placeholder="mm" style="width: 30px; text-align: center"> </input>/
     <input type="text" id="input_day" placeholder="jj" style="width: 30px; text-align: center "> </input> <br/> <br/>
     <label for="amendment">Amendement :</label><input type="checkbox" id="amendment"> </input> <br><br/>
     <label for="fertilisation">Fertilisation :</label><input type="checkbox" id="fertilisation"> </input> <br/><br/>
     <label for="work">Travail du sol :</label><input type="checkbox" id="work"> </input> <br/><br/>
-    <label for="type">Type de sol :</label><select id="type">
-        <option>Type1</option>
-        <option>Type2</option>
-    </select>
-    <br/><br/>
-    <label for="type_cult">Type de culture :</label><select id="type_cult" onchange="update(this)">
-        <option>Type1</option>
-        <option>Type2</option>
-    </select><br></body><br>
-    <div style="position: absolute; left: 156px" id="variety"></div>
-    <button type="button" onclick="main();"> valider </button>
+        <label for="type">Type de sol :</label>
+        <span class="custom-dropdown custom-dropdown--white">
+            <select id="type" class="custom-dropdown__select custom-dropdown__select--white">
+                <option>Type1</option>
+                <option>Type2</option>
+            </select>
+        </span>
+        <br/><br/>
+        <label for="type_cult">Type de culture :</label>
+        <span class="custom-dropdown custom-dropdown--white">
+              <select id="type_cult" onchange="update(this)" class="custom-dropdown__select custom-dropdown__select--white">
+                  <option>Type1</option>
+                  <option>Type2</option>
+              </select>
+        </span>
+    <div style="position: absolute; left: 350px; display: inline" id="variety"></div><br/><br/>
+    <button type="button" onclick="main();"> Valider </button>
 </body>
 </html>
