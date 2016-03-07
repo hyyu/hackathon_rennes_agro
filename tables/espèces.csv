@@ -1,0 +1,9 @@
+Type de culture,Enracinement max (cm),T de base (°C),ST floraison (°C),ST récolte (°C),Besoin par u de production(kg de N/qt),Objectifs de rendements,keq
+Blé dur,90,       6,850,2350,4,71,"0,3"
+Blé tendre,70,    6,850,2350,3,67,"0,3"
+Colza,90,         6,700,2330,"6,5",30,"0,4"
+Maïs doux,90,     6,1200,2000,11,12,"0,5"
+Maïs fourrage,90, 6,1200,2000,13,12,"0,5"
+Maïs grain,90,    6,1200,2000,2,37,"0,5"
+Orge,90,          0,850,2350,"2,5",61,"0,3"
+Soja,80,          6,520,2000,0,0,0
