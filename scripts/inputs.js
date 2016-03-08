@@ -213,6 +213,10 @@ function	main()
 	tabMonths = create_dtable();
 	sum = sumTab(temp, tabMonths, inputs.sowing_date, today);
 	console.log(sum);
+	var sample = document.createElement("img");
+	var body = document.getElementById("body");
+	sample.src="../img/parcelle2.png";
+	body.appendChild(sample);
 	return 0;
 }
 

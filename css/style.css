@@ -143,3 +143,13 @@ input:focus{
     }
 }
 
+canvas{
+    background: #fff;
+    margin: 20px;
+}
+
+img{
+    position: absolute;
+    right: 20px;
+    top: 170px;
+}

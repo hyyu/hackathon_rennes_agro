@@ -8,19 +8,19 @@
     <script type="application/x-javascript" src="../scripts/formulaire.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Quicksand" />
 </head>
-<body>
-    <label for="prev_cult">Précédents de culture :</label><input type="text" id="prev_cult"> </input> <br/><br/>
-    <label for="size">Taille de la culture :</label><input type="text" id="size"> </input> <br/><br/>
+<body id="body">
+    <label for="prev_cult">Précédents de culture :</label><input type="text" id="prev_cult" value="maïs"> </input> <br/><br/>
+    <label for="size">Taille de la culture :</label><input type="text" id="size" value="80000   "> </input> m2 <br/><br/>
     <label for="watering_rep">Arrosages par semaine :&nbsp;</label>
-    <input type="text" id="watering_rep">&nbsp;Durée :&nbsp;</input>
-    <input type="text" id="watering_duration"></label>&nbsp;mn<br/><br/>
+    <input type="text" id="watering_rep" value="0">&nbsp;Durée :&nbsp;</input>
+    <input type="text" id="watering_duration" value="0"></label>&nbsp;mn<br/><br/>
     <label for="input_year">Date de semis :</label>
-    <input type="text" id="input_year" placeholder="yyyy" style="width: 30px; text-align: center"> </input>/
-    <input type="text" id="input_month" placeholder="mm" style="width: 30px; text-align: center"> </input>/
-    <input type="text" id="input_day" placeholder="jj" style="width: 30px; text-align: center "> </input> <br/> <br/>
-    <label for="amendment">Amendement :</label><input type="checkbox" id="amendment"> </input> <br><br/>
-    <label for="fertilisation">Fertilisation :</label><input type="checkbox" id="fertilisation"> </input> <br/><br/>
-    <label for="work">Travail du sol :</label><input type="checkbox" id="work"> </input> <br/><br/>
+    <input type="text" id="input_year" placeholder="yyyy" style="width: 30px; text-align: center" value="2016"> </input>/
+    <input type="text" id="input_month" placeholder="mm" style="width: 30px; text-align: center" value="04"> </input>/
+    <input type="text" id="input_day" placeholder="jj" style="width: 30px; text-align: center" value="04"> </input> <br/> <br/>
+    <label for="amendment">Amendement :</label><input type="checkbox" id="amendment" checked> </input> <br><br/>
+    <label for="fertilisation">Fertilisation :</label><input type="checkbox" id="fertilisation" checked> </input> <br/><br/>
+    <label for="work">Travail du sol :</label><input type="checkbox" id="work" checked> </input> <br/><br/>
         <label for="type">Type de sol :</label>
         <span class="custom-dropdown custom-dropdown--white">
             <select id="type" class="custom-dropdown__select custom-dropdown__select--white">
@@ -60,6 +60,59 @@
               </select>
         </span>
     <div style="position: absolute; left: 350px; display: inline" id="variety"></div><br/><br/>
+    <div style="position: absolute; right: 0px; top: 160px" id="map"></div>
+    <img src="../img/terre.png" style="display: none" id="ground">
+    <script>
+        //grid width and height
+        var bw = 700;
+        var bh = 440;
+        //padding around grid
+        var p = 0;
+        //size of canvas
+        var cw = bw + (p*2) + 1;
+        var ch = bh + (p*2) + 1;
+
+        var canvas = document.createElement("canvas");
+        var div = document.getElementById("map");
+        div.appendChild(canvas);
+        canvas.width = cw;
+        canvas.height = ch;
+        var context = canvas.getContext("2d");
+        var img = document.getElementById("ground");
+        function drawBoard(){
+            for (var x = 0; x <= bw; x += 175) {
+                context.moveTo(0.5 + x + p, p);
+                context.lineTo(0.5 + x + p, bh + p);
+            };
+
+            for (var x = 0; x <= bh; x += 110) {
+                context.moveTo(p, 0.5 + x + p);
+                context.lineTo(bw + p, 0.5 + x + p);
+            }
+            context.drawImage(img,0,0);
+            context.drawImage(img,175,0);
+            context.drawImage(img,350,0);
+            context.drawImage(img,525,0);
+            context.drawImage(img,0,0);
+            context.drawImage(img,0,110);
+            context.drawImage(img,175,110);
+            context.drawImage(img,350,110);
+            context.drawImage(img,525,110);
+            context.drawImage(img,0,220);
+            context.drawImage(img,175,220);
+            context.drawImage(img,350,220);
+            context.drawImage(img,525,220);
+            context.drawImage(img,0,330);
+            context.drawImage(img,175,330);
+            context.drawImage(img,350,330);
+            context.drawImage(img,525,330);
+
+            context.strokeStyle = "black";
+            context.stroke();
+        }
+        drawBoard();
+
+    </script>
     <button type="button" onclick="main();"> Valider </button>
 </body>
 </html>
