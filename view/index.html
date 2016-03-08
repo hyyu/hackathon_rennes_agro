@@ -24,27 +24,42 @@
         <label for="type">Type de sol :</label>
         <span class="custom-dropdown custom-dropdown--white">
             <select id="type" class="custom-dropdown__select custom-dropdown__select--white">
-                <option>Type1</option>
-                <option>Type2</option>
+                <option>Sableux</option>
+                <option>Sablo-limoneux</option>
+                <option>Sablo-argileux</option>
+                <option>Limoneux</option>
+                <option>Limono-sableux</option>
+                <option>Limono-argileux</option>
+                <option>Argileux</option>
+                <option>Argilo-limoneux</option>
+                <option>Argilo-sableux</option>
             </select>
         </span>
         <br/><br/>
     <label for="fertilizer">Type d'engrais :</label>
         <span class="custom-dropdown custom-dropdown--white">
             <select id="fertilizer" class="custom-dropdown__select custom-dropdown__select--white">
-                <option>Type1</option>
-                <option>Type2</option>
+                <option>ammoniac anhydre</option>
+                <option>solutions azotées</option>
+                <option>nitrate de soude</option>
+                <option>ammonitrate</option>
             </select>
         </span>
     <br/><br/>
         <label for="type_cult">Type de culture :</label>
         <span class="custom-dropdown custom-dropdown--white">
               <select id="type_cult" onchange="update(this)" class="custom-dropdown__select custom-dropdown__select--white">
-                  <option>Type1</option>
-                  <option>Type2</option>
+                  <option>blé dur</option>
+                  <option>blé tendre</option>
+                  <option>colza</option>
+                  <option>maïs doux</option>
+                  <option>maïs fourrage</option>
+                  <option>maïs grain</option>
+                  <option>orge</option>
+                  <option>soja</option>
               </select>
         </span>
     <div style="position: absolute; left: 350px; display: inline" id="variety"></div><br/><br/>
-    <button type="button" onclick="test();"> Valider </button>
+    <button type="button" onclick="main();"> Valider </button>
 </body>
 </html>
